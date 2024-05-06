@@ -19,6 +19,10 @@ public class Prescription {
         this.instructions = instructions;
         this.duration = duration;
     }
+
+    public Prescription(int i, Object object, String medicine_1, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     // Getters and Setters
     public long getId() {
