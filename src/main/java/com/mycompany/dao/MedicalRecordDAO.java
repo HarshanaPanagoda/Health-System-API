@@ -1,37 +1,57 @@
 package com.mycompany.dao;
 
 import com.mycompany.models.MedicalRecord;
-
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class MedicalRecordDAO {
+    private static final Logger logger = LoggerFactory.getLogger(MedicalRecordDAO.class);
+    private static MedicalRecordDAO instance;  // Singleton instance
     private final Map<Long, MedicalRecord> medicalRecordMap = new HashMap<>();
+    private long nextId = 1;
 
-    public MedicalRecordDAO() {
-        // Initialize with sample medical records
-        MedicalRecord record1 = new MedicalRecord(1, null, "Diagnosis 1", "Treatment 1");
-        MedicalRecord record2 = new MedicalRecord(2, null, "Diagnosis 2", "Treatment 2");
+    private MedicalRecordDAO() {
+        // Private constructor to enforce singleton pattern
+    }
 
-        medicalRecordMap.put(record1.getId(), record1);
-        medicalRecordMap.put(record2.getId(), record2);
+    public static synchronized MedicalRecordDAO getInstance() {
+        if (instance == null) {
+            instance = new MedicalRecordDAO();
+        }
+        return instance;
+    }
+
+    public Collection<MedicalRecord> getAllMedicalRecords() {
+        return medicalRecordMap.values();
     }
 
     public void addMedicalRecord(MedicalRecord medicalRecord) {
+        medicalRecord.setId(nextId++);
         medicalRecordMap.put(medicalRecord.getId(), medicalRecord);
+        logger.info("Successfully added medical record with ID: {}", medicalRecord.getId());
     }
 
     public MedicalRecord getMedicalRecordById(long id) {
         return medicalRecordMap.get(id);
     }
 
-    public void updateMedicalRecord(MedicalRecord medicalRecord) {
+    public boolean updateMedicalRecord(MedicalRecord medicalRecord) {
         if (medicalRecordMap.containsKey(medicalRecord.getId())) {
             medicalRecordMap.put(medicalRecord.getId(), medicalRecord);
+            return true;
         }
+        return false;
     }
 
-    public void deleteMedicalRecord(long id) {
-        medicalRecordMap.remove(id);
+    public boolean deleteMedicalRecord(long id) {
+        if (medicalRecordMap.containsKey(id)) {
+            medicalRecordMap.remove(id);
+            return true;
+        }
+        return false;
     }
 }

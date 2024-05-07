@@ -6,6 +6,7 @@ public class Person {
     private String contactInformation;
     private String address;
     
+    public Person(){};
     // Constructor
     public Person(long id, String name, String contactInformation, String address) {
         this.id = id;

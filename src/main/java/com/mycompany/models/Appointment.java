@@ -7,7 +7,8 @@ public class Appointment {
     private Patient patient;
     private Doctor doctor;
     
-    // Constructor
+    public Appointment() {}
+    
     public Appointment(long id, String date, String time, Patient patient, Doctor doctor) {
         this.id = id;
         this.date = date;
