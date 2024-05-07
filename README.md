@@ -53,4 +53,4 @@ The application utilizes Logback for logging events. A Logback configuration fil
 - I have developed a RESTful web service as a part of my degree program. If you are considering using it in a production environment, replacing the static data with a database and implementing proper security measures would be best.
 
 #
-Please feel free to make any changes you'd like, and don't hesitate to let me know if you're like this⭐!
+Feel free to make any changes you'd like, and don't hesitate to let me know if you're like this⭐!
