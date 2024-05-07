@@ -17,10 +17,10 @@ public class AppointmentDAO {
 
     public AppointmentDAO() {
         // Initialize with sample appointments
-        Doctor doctor1 = new Doctor(1, "Dr. Smith", "1234567890", "123 Main St", "Cardiology");
-        Doctor doctor2 = new Doctor(2, "Dr. Johnson", "0987654321", "456 Elm St", "Pediatrics");
-        Patient patient1 = new Patient(1, "John Doe", "1234567890", "123 Main St", "Heart disease", "Stable");
-        Patient patient2 = new Patient(2, "Jane Smith", "0987654321", "456 Elm St", "Diabetes", "Improving");
+        Doctor doctor1 = new Doctor(1, "Dr. Smith", "555-987-6543", "456 Oak St, Anytown, USA", "Cardiology");
+        Doctor doctor2 = new Doctor(2, "Dr. Johnson", "555-333-4444", "101 Pine St, Othertown, USA", "Pediatrics");
+        Patient patient1 = new Patient(1, "John Doe", "555-123-4567", "123 Main St, Anytown, USA", "Hypertension", "Stable");
+        Patient patient2 = new Patient(2, "Bob Anderson", "555-111-2222", "89 Maple St, Othertown, USA", "Type 1 Diabetes", "Improving");
 
         Appointment appointment1 = new Appointment(1, "2024-05-07", "10:00 AM", patient1, doctor1);
         Appointment appointment2 = new Appointment(2, "2024-05-08", "11:00 AM", patient2, doctor2);

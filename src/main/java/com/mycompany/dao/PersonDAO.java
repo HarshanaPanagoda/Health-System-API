@@ -15,11 +15,13 @@ public class PersonDAO {
 
     public PersonDAO() {
         // Initialize with sample persons
-        Person person1 = new Person(1, "John Doe", "1234567890", "123 Main St");
-        Person person2 = new Person(2, "Jane Smith", "0987654321", "456 Elm St");
+        Person person1 = new Person(1, "John Doe", "555-123-4567", "123 Main St, Anytown, USA");
+        Person person2 = new Person(2, "Dr. Johnson", "555-333-4444", "101 Pine St, Othertown, USA");
+
 
         personMap.put(person1.getId(), person1);
         personMap.put(person2.getId(), person2);
+       
     }
 
     // Public method to get the singleton instance

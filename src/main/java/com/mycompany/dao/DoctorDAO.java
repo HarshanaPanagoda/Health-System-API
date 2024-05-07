@@ -15,8 +15,8 @@ public class DoctorDAO {
 
     public DoctorDAO() {
         // Initialize with sample doctors
-        Doctor doctor1 = new Doctor(1, "Dr. Smiths", "1234567890", "123 Main St", "Cardiology");
-        Doctor doctor2 = new Doctor(2, "Dr. Johnson", "0987654321", "456 Elm St", "Pediatrics");
+        Doctor doctor1 = new Doctor(1, "Dr. Smith", "555-987-6543", "456 Oak St, Anytown, USA", "Cardiology");
+        Doctor doctor2 = new Doctor(2, "Dr. Johnson", "555-333-4444", "101 Pine St, Othertown, USA", "Pediatrics");
 
         doctorMap.put(doctor1.getId(), doctor1);
         doctorMap.put(doctor2.getId(), doctor2);

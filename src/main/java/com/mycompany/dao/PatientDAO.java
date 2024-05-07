@@ -15,8 +15,8 @@ public class PatientDAO {
 
     public PatientDAO() {
         // Initialize with sample patients
-        Patient patient1 = new Patient(1, "John Doe", "1234567890", "123 Main St", "Heart disease", "Stable");
-        Patient patient2 = new Patient(2, "Jane Smith", "0987654321", "456 Elm St", "Diabetes", "Improving");
+        Patient patient1 = new Patient(1, "John Doe", "555-123-4567", "123 Main St, Anytown, USA", "Hypertension", "Stable");
+        Patient patient2 = new Patient(2, "Bob Anderson", "555-111-2222", "89 Maple St, Othertown, USA", "Type 1 Diabetes", "Improving");
 
         patientMap.put(patient1.getId(), patient1);
         patientMap.put(patient2.getId(), patient2);
